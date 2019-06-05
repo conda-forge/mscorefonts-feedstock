@@ -10,18 +10,45 @@ source:
   sha256: 7d3c7abe6c6f21e1a48fa1cafccb1005dcfcff9ad2f135ae219854ace6be42d0
 
 build:
-  number: 1
+  number: 2
   skip: True  # [not linux]
 
 requirements:
   build:
     - cabextract
-  host:
-    - matplotlib
 
 test:
-  imports:
-    - matplotlib
+  commands:
+    - test -f $PREFIX/fonts/andalemo.ttf  # [unix]
+    - test -f $PREFIX/fonts/ariali.ttf  # [unix]
+    - test -f $PREFIX/fonts/cour.ttf  # [unix]
+    - test -f $PREFIX/fonts/georgia.ttf  # [unix]
+    - test -f $PREFIX/fonts/impact.ttf  # [unix]
+    - test -f $PREFIX/fonts/timesi.ttf  # [unix]
+    - test -f $PREFIX/fonts/trebucit.ttf  # [unix]
+    - test -f $PREFIX/fonts/verdanaz.ttf  # [unix]
+    - test -f $PREFIX/fonts/arial.ttf  # [unix]
+    - test -f $PREFIX/fonts/ariblk.ttf  # [unix]
+    - test -f $PREFIX/fonts/courbd.ttf  # [unix]
+    - test -f $PREFIX/fonts/georgiab.ttf  # [unix]
+    - test -f $PREFIX/fonts/times.ttf  # [unix]
+    - test -f $PREFIX/fonts/trebuc.ttf  # [unix]
+    - test -f $PREFIX/fonts/verdana.ttf  # [unix]
+    - test -f $PREFIX/fonts/webdings.ttf  # [unix]
+    - test -f $PREFIX/fonts/arialbd.ttf  # [unix]
+    - test -f $PREFIX/fonts/comic.ttf  # [unix]
+    - test -f $PREFIX/fonts/courbi.ttf  # [unix]
+    - test -f $PREFIX/fonts/georgiai.ttf  # [unix]
+    - test -f $PREFIX/fonts/timesbd.ttf  # [unix]
+    - test -f $PREFIX/fonts/trebucbd.ttf  # [unix]
+    - test -f $PREFIX/fonts/verdanab.ttf  # [unix]
+    - test -f $PREFIX/fonts/arialbi.ttf  # [unix]
+    - test -f $PREFIX/fonts/comicbd.ttf  # [unix]
+    - test -f $PREFIX/fonts/couri.ttf  # [unix]
+    - test -f $PREFIX/fonts/georgiaz.ttf  # [unix]
+    - test -f $PREFIX/fonts/timesbi.ttf  # [unix]
+    - test -f $PREFIX/fonts/trebucbi.ttf  # [unix]
+    - test -f $PREFIX/fonts/verdanai.ttf  # [unix]
 
 about:
   home: https://sourceforge.net/projects/mscorefonts
