@@ -10,7 +10,7 @@ source:
   sha256: 7d3c7abe6c6f21e1a48fa1cafccb1005dcfcff9ad2f135ae219854ace6be42d0
 
 build:
-  number: 1
+  number: 2
   skip: True  # [not linux]
 
 requirements:
@@ -20,8 +20,37 @@ requirements:
     - matplotlib
 
 test:
-  imports:
-    - matplotlib
+  commands:
+    - test -f $SP_DIR/matplotlib/mpl-data/fonts/ttf/andalemo.ttf  # [unix]
+    - test -f $SP_DIR/matplotlib/mpl-data/fonts/ttf/ariali.ttf  # [unix]
+    - test -f $SP_DIR/matplotlib/mpl-data/fonts/ttf/cour.ttf  # [unix]
+    - test -f $SP_DIR/matplotlib/mpl-data/fonts/ttf/georgia.ttf  # [unix]
+    - test -f $SP_DIR/matplotlib/mpl-data/fonts/ttf/impact.ttf  # [unix]
+    - test -f $SP_DIR/matplotlib/mpl-data/fonts/ttf/timesi.ttf  # [unix]
+    - test -f $SP_DIR/matplotlib/mpl-data/fonts/ttf/trebucit.ttf  # [unix]
+    - test -f $SP_DIR/matplotlib/mpl-data/fonts/ttf/verdanaz.ttf  # [unix]
+    - test -f $SP_DIR/matplotlib/mpl-data/fonts/ttf/arial.ttf  # [unix]
+    - test -f $SP_DIR/matplotlib/mpl-data/fonts/ttf/ariblk.ttf  # [unix]
+    - test -f $SP_DIR/matplotlib/mpl-data/fonts/ttf/courbd.ttf  # [unix]
+    - test -f $SP_DIR/matplotlib/mpl-data/fonts/ttf/georgiab.ttf  # [unix]
+    - test -f $SP_DIR/matplotlib/mpl-data/fonts/ttf/times.ttf  # [unix]
+    - test -f $SP_DIR/matplotlib/mpl-data/fonts/ttf/trebuc.ttf  # [unix]
+    - test -f $SP_DIR/matplotlib/mpl-data/fonts/ttf/verdana.ttf  # [unix]
+    - test -f $SP_DIR/matplotlib/mpl-data/fonts/ttf/webdings.ttf  # [unix]
+    - test -f $SP_DIR/matplotlib/mpl-data/fonts/ttf/arialbd.ttf  # [unix]
+    - test -f $SP_DIR/matplotlib/mpl-data/fonts/ttf/comic.ttf  # [unix]
+    - test -f $SP_DIR/matplotlib/mpl-data/fonts/ttf/courbi.ttf  # [unix]
+    - test -f $SP_DIR/matplotlib/mpl-data/fonts/ttf/georgiai.ttf  # [unix]
+    - test -f $SP_DIR/matplotlib/mpl-data/fonts/ttf/timesbd.ttf  # [unix]
+    - test -f $SP_DIR/matplotlib/mpl-data/fonts/ttf/trebucbd.ttf  # [unix]
+    - test -f $SP_DIR/matplotlib/mpl-data/fonts/ttf/verdanab.ttf  # [unix]
+    - test -f $SP_DIR/matplotlib/mpl-data/fonts/ttf/arialbi.ttf  # [unix]
+    - test -f $SP_DIR/matplotlib/mpl-data/fonts/ttf/comicbd.ttf  # [unix]
+    - test -f $SP_DIR/matplotlib/mpl-data/fonts/ttf/couri.ttf  # [unix]
+    - test -f $SP_DIR/matplotlib/mpl-data/fonts/ttf/georgiaz.ttf  # [unix]
+    - test -f $SP_DIR/matplotlib/mpl-data/fonts/ttf/timesbi.ttf  # [unix]
+    - test -f $SP_DIR/matplotlib/mpl-data/fonts/ttf/trebucbi.ttf  # [unix]
+    - test -f $SP_DIR/matplotlib/mpl-data/fonts/ttf/verdanai.ttf  # [unix]
 
 about:
   home: https://sourceforge.net/projects/mscorefonts
