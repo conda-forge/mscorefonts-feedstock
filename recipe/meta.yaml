@@ -11,8 +11,8 @@ source:
 
 build:
   number: 2
-  noarch: generic
-  skip: True  # [win]
+  noarch: python
+  skip: True  # [not linux]
 
 requirements:
   build:
