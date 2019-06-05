@@ -11,46 +11,45 @@ source:
 
 build:
   number: 2
-  skip: True  # [not linux]
+  noarch: generic
+  skip: True  # [win]
 
 requirements:
   build:
     - cabextract
-  host:
-    - matplotlib
 
 test:
   commands:
-    - test -f $SP_DIR/matplotlib/mpl-data/fonts/ttf/andalemo.ttf  # [unix]
-    - test -f $SP_DIR/matplotlib/mpl-data/fonts/ttf/ariali.ttf  # [unix]
-    - test -f $SP_DIR/matplotlib/mpl-data/fonts/ttf/cour.ttf  # [unix]
-    - test -f $SP_DIR/matplotlib/mpl-data/fonts/ttf/georgia.ttf  # [unix]
-    - test -f $SP_DIR/matplotlib/mpl-data/fonts/ttf/impact.ttf  # [unix]
-    - test -f $SP_DIR/matplotlib/mpl-data/fonts/ttf/timesi.ttf  # [unix]
-    - test -f $SP_DIR/matplotlib/mpl-data/fonts/ttf/trebucit.ttf  # [unix]
-    - test -f $SP_DIR/matplotlib/mpl-data/fonts/ttf/verdanaz.ttf  # [unix]
-    - test -f $SP_DIR/matplotlib/mpl-data/fonts/ttf/arial.ttf  # [unix]
-    - test -f $SP_DIR/matplotlib/mpl-data/fonts/ttf/ariblk.ttf  # [unix]
-    - test -f $SP_DIR/matplotlib/mpl-data/fonts/ttf/courbd.ttf  # [unix]
-    - test -f $SP_DIR/matplotlib/mpl-data/fonts/ttf/georgiab.ttf  # [unix]
-    - test -f $SP_DIR/matplotlib/mpl-data/fonts/ttf/times.ttf  # [unix]
-    - test -f $SP_DIR/matplotlib/mpl-data/fonts/ttf/trebuc.ttf  # [unix]
-    - test -f $SP_DIR/matplotlib/mpl-data/fonts/ttf/verdana.ttf  # [unix]
-    - test -f $SP_DIR/matplotlib/mpl-data/fonts/ttf/webdings.ttf  # [unix]
-    - test -f $SP_DIR/matplotlib/mpl-data/fonts/ttf/arialbd.ttf  # [unix]
-    - test -f $SP_DIR/matplotlib/mpl-data/fonts/ttf/comic.ttf  # [unix]
-    - test -f $SP_DIR/matplotlib/mpl-data/fonts/ttf/courbi.ttf  # [unix]
-    - test -f $SP_DIR/matplotlib/mpl-data/fonts/ttf/georgiai.ttf  # [unix]
-    - test -f $SP_DIR/matplotlib/mpl-data/fonts/ttf/timesbd.ttf  # [unix]
-    - test -f $SP_DIR/matplotlib/mpl-data/fonts/ttf/trebucbd.ttf  # [unix]
-    - test -f $SP_DIR/matplotlib/mpl-data/fonts/ttf/verdanab.ttf  # [unix]
-    - test -f $SP_DIR/matplotlib/mpl-data/fonts/ttf/arialbi.ttf  # [unix]
-    - test -f $SP_DIR/matplotlib/mpl-data/fonts/ttf/comicbd.ttf  # [unix]
-    - test -f $SP_DIR/matplotlib/mpl-data/fonts/ttf/couri.ttf  # [unix]
-    - test -f $SP_DIR/matplotlib/mpl-data/fonts/ttf/georgiaz.ttf  # [unix]
-    - test -f $SP_DIR/matplotlib/mpl-data/fonts/ttf/timesbi.ttf  # [unix]
-    - test -f $SP_DIR/matplotlib/mpl-data/fonts/ttf/trebucbi.ttf  # [unix]
-    - test -f $SP_DIR/matplotlib/mpl-data/fonts/ttf/verdanai.ttf  # [unix]
+    - test -f $PREFIX/fonts/andalemo.ttf  # [unix]
+    - test -f $PREFIX/fonts/ariali.ttf  # [unix]
+    - test -f $PREFIX/fonts/cour.ttf  # [unix]
+    - test -f $PREFIX/fonts/georgia.ttf  # [unix]
+    - test -f $PREFIX/fonts/impact.ttf  # [unix]
+    - test -f $PREFIX/fonts/timesi.ttf  # [unix]
+    - test -f $PREFIX/fonts/trebucit.ttf  # [unix]
+    - test -f $PREFIX/fonts/verdanaz.ttf  # [unix]
+    - test -f $PREFIX/fonts/arial.ttf  # [unix]
+    - test -f $PREFIX/fonts/ariblk.ttf  # [unix]
+    - test -f $PREFIX/fonts/courbd.ttf  # [unix]
+    - test -f $PREFIX/fonts/georgiab.ttf  # [unix]
+    - test -f $PREFIX/fonts/times.ttf  # [unix]
+    - test -f $PREFIX/fonts/trebuc.ttf  # [unix]
+    - test -f $PREFIX/fonts/verdana.ttf  # [unix]
+    - test -f $PREFIX/fonts/webdings.ttf  # [unix]
+    - test -f $PREFIX/fonts/arialbd.ttf  # [unix]
+    - test -f $PREFIX/fonts/comic.ttf  # [unix]
+    - test -f $PREFIX/fonts/courbi.ttf  # [unix]
+    - test -f $PREFIX/fonts/georgiai.ttf  # [unix]
+    - test -f $PREFIX/fonts/timesbd.ttf  # [unix]
+    - test -f $PREFIX/fonts/trebucbd.ttf  # [unix]
+    - test -f $PREFIX/fonts/verdanab.ttf  # [unix]
+    - test -f $PREFIX/fonts/arialbi.ttf  # [unix]
+    - test -f $PREFIX/fonts/comicbd.ttf  # [unix]
+    - test -f $PREFIX/fonts/couri.ttf  # [unix]
+    - test -f $PREFIX/fonts/georgiaz.ttf  # [unix]
+    - test -f $PREFIX/fonts/timesbi.ttf  # [unix]
+    - test -f $PREFIX/fonts/trebucbi.ttf  # [unix]
+    - test -f $PREFIX/fonts/verdanai.ttf  # [unix]
 
 about:
   home: https://sourceforge.net/projects/mscorefonts
